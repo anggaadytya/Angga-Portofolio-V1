@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { imagesData } from "../utils/images"
+import { imagesHome } from "../utils/images"
 
 const HomePage = () => {
   const scaleVariants = {
@@ -41,11 +41,11 @@ const HomePage = () => {
         transition={{ duration: 0.5, delayChildren: 0.5 }}
         className="app__header-img"
       >
-        <img src={imagesData.imagesSide} alt="profile_bg" width={1000} height={1000}/>
+        <img src={imagesHome.imagesSide} alt="profile_bg" width={1000} height={1000}/>
         <motion.img
           whileInView={{ scale: [0, 1] }}
           transition={{ duration: 1, ease: "easeInOut" }}
-          src={imagesData.circle}
+          src={imagesHome.circle}
           alt="profile_circle"
           className="overlay_circle"
         />
@@ -56,7 +56,7 @@ const HomePage = () => {
         whileInView={scaleVariants.whileInView}
         className="app__header-circles"
       >
-        {[imagesData.node, imagesData.react, imagesData.mu5].map((circle, index) => (
+        {[imagesHome.node, imagesHome.react, imagesHome.mu5].map((circle, index) => (
           <div className="circle-cmp app__flex" key={`circle-${index}`}>
             <img src={circle} alt="profile_bg" />
           </div>
