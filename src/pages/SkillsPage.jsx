@@ -52,9 +52,9 @@ const SkillsPage = () => {
             variants={scaleVariants}
             whileInView={scaleVariants.whileInView}
             key={`circle-${index}`}
-            className="w-[100px] h-[100px] rounded-full bg-white shadow-2xl mx-auto"
+            className="w-[70px] h-[70px] md:w-[100px] md:h-[100px] rounded-full bg-white shadow-2xl mx-auto"
           >
-            <div className="flex my-4 justify-center items-center">
+            <div className="flex my-3 md:my-4 justify-center items-center">
               <img
                 src={circle}
                 alt="profile_bg"
