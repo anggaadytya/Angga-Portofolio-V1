@@ -1,12 +1,3 @@
-import css from "../assets/images/css.png";
-import figma from "../assets/images/figma.png";
-import git from "../assets/images/git.png";
-import graphql from "../assets/images/graphql.png";
-import html from "../assets/images/html.png";
-import javascript from "../assets/images/javascript.png";
-import mu5 from "../assets/images/mu5.png";
-import node from "../assets/images/node.png";
-import react from "../assets/images/react.png";
 import sass from "../assets/images/sass.png";
 import flutter from "../assets/images/flutter.png";
 import python from "../assets/images/python.png";
@@ -14,6 +5,25 @@ import python from "../assets/images/python.png";
 import profile from "../assets/images/profile1.png";
 import imagesSide from "../assets/images/imageSide.png";
 import circle from "../assets/images/circle.svg";
+
+import bootstrap from "../assets/logo/bootstrap.svg";
+import css from "../assets/logo/css3.svg"
+import figma from "../assets/logo/figma.svg"
+import framer from "../assets/logo/frameMotion.svg"
+import html from "../assets/logo/html5.svg"
+import javascript from "../assets/logo/javascript.svg"
+import mu5 from "../assets/logo/MaterialUI.svg"
+import mysql from "../assets/logo/mySQL.svg"
+import node from "../assets/logo/nodejs.svg"
+import php from "../assets/logo/php.svg"
+import react from "../assets/logo/reactJs.svg"
+import reactQuery from "../assets/logo/reactQuery.svg"
+import tailwind from "../assets/logo/tailwindCss.svg"
+import viteJs from "../assets/logo/viteJs.svg"
+import vitest from "../assets/logo/vitest.svg"
+
+
+
 
 export const imagesData = [
   {
@@ -25,12 +35,12 @@ export const imagesData = [
     img: figma,
   },
   {
-    name: "Git",
-    img: git,
+    name: "Bootstrap",
+    img: bootstrap,
   },
   {
-    name: "GraphQL",
-    img: graphql,
+    name: "Framer Motion",
+    img: framer,
   },
   {
     name: "HTML",
@@ -41,16 +51,40 @@ export const imagesData = [
     img: javascript,
   },
   {
-    name: "Mu5",
+    name: "Material UI",
     img: mu5,
+  },
+  {
+    name: "MySQL",
+    img: mysql,
   },
   {
     name: "Node",
     img: node,
   },
   {
+    name: "PHP",
+    img: php,
+  },
+  {
     name: "React",
     img: react,
+  },
+  {
+    name: "React Query",
+    img: reactQuery,
+  },
+  {
+    name: "Tailwind",
+    img: tailwind,
+  },
+  {
+    name: "Vite",
+    img: viteJs,
+  },
+  {
+    name: "Vitest",
+    img: vitest,
   },
   {
     name: "Sass",
