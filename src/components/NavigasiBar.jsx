@@ -26,7 +26,7 @@ const NavigasiBar = () => {
         className="p-1 font-normal hover:bg-blue-gray-300 hover:text-white hover:rounded-lg"
         onClick={() => setOpenNav(false)}
       >
-        <a href="#" className="flex items-center">
+        <a href="/" className="flex items-center">
           Home
         </a>
       </Typography>
@@ -37,7 +37,7 @@ const NavigasiBar = () => {
         className="p-1 font-normal hover:bg-blue-gray-300 hover:text-white hover:rounded-lg"
         onClick={() => setOpenNav(false)}
       >
-        <a href="#" className="flex items-center">
+        <a href="skills" className="flex items-center">
           Skills
         </a>
       </Typography>
@@ -48,7 +48,7 @@ const NavigasiBar = () => {
         className="p-1 font-normal hover:bg-blue-gray-300 hover:text-white hover:rounded-lg"
         onClick={() => setOpenNav(false)}
       >
-        <a href="#" className="flex items-center">
+        <a href="project" className="flex items-center">
           Project
         </a>
       </Typography>
@@ -59,7 +59,7 @@ const NavigasiBar = () => {
         className="p-1 font-normal hover:bg-blue-gray-300 hover:text-white hover:rounded-lg"
         onClick={() => setOpenNav(false)}
       >
-        <a href="#" className="flex items-center">
+        <a href="about" className="flex items-center">
           Abouts
         </a>
       </Typography>

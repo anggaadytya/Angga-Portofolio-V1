@@ -1,7 +1,32 @@
 import NavigasiBar from "./components/NavigasiBar"
 import HomePage from "./pages/HomePage"
 import SkillsPage from "./pages/SkillsPage"
+import ProjectPage from "./pages/ProjectPage"
+import AboutPage from "./pages/AboutPage"
 import "./App.scss"
+
+import { createBrowserRouter, RouterProvider,  } from "react-router-dom"
+
+const router = createBrowserRouter([
+  {
+    path: "/",
+    element: <HomePage />,
+  },
+  {
+    path: "/skills",
+    element: <SkillsPage />,
+  },
+  {
+    path: "/project",
+    element: <ProjectPage/>
+  },
+  {
+    path: "/about",
+    element: <AboutPage/>
+  }
+])
+
+
 
 
 function App() {
@@ -12,8 +37,7 @@ function App() {
         <NavigasiBar/>
       </header>
       <main className="pt-10">
-        <HomePage/>
-        <SkillsPage/>
+        <RouterProvider router={router} />
       </main>
     </div>
   )
