@@ -22,7 +22,7 @@ const SkillsPage = () => {
         ease: "easeInOut",
       },
     },
-  }
+  };
 
   return (
     <div className="container py-20 mx-auto">
@@ -33,11 +33,7 @@ const SkillsPage = () => {
       >
         TECH STACK
       </motion.h1>
-      <motion.div
-        variants={scaleVariants}
-        whileInView={scaleVariants.whileInView}
-        className="skills__header-circles container mx-auto"
-      >
+      <motion.div className=" grid grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-5 px-2">
         {[
           imagesData.node,
           imagesData.react,
@@ -45,13 +41,27 @@ const SkillsPage = () => {
           imagesData.html,
           imagesData.css,
           imagesData.figma,
+          imagesData.git,
+          imagesData.python,
+          imagesData.flutter,
+          imagesData.graphql,
+          imagesData.javascript,
+          imagesData.sass,
         ].map((circle, index) => (
-          <div
-            className="skills__flex container mx-auto"
+          <motion.div
+            variants={scaleVariants}
+            whileInView={scaleVariants.whileInView}
             key={`circle-${index}`}
+            className="w-[100px] h-[100px] rounded-full bg-white shadow-2xl mx-auto"
           >
-            <img src={circle} alt="profile_bg" />
-          </div>
+            <div className="flex my-4 justify-center items-center">
+              <img
+                src={circle}
+                alt="profile_bg"
+                className="flex w-[70%] h-[70%]"
+              />
+            </div>
+          </motion.div>
         ))}
       </motion.div>
     </div>
