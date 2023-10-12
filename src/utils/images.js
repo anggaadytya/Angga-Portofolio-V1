@@ -7,23 +7,20 @@ import imagesSide from "../assets/images/imageSide.png";
 import circle from "../assets/images/circle.svg";
 
 import bootstrap from "../assets/logo/bootstrap.svg";
-import css from "../assets/logo/css3.svg"
-import figma from "../assets/logo/figma.svg"
-import framer from "../assets/logo/frameMotion.svg"
-import html from "../assets/logo/html5.svg"
-import javascript from "../assets/logo/javascript.svg"
-import mu5 from "../assets/logo/MaterialUI.svg"
-import mysql from "../assets/logo/mySQL.svg"
-import node from "../assets/logo/nodejs.svg"
-import php from "../assets/logo/php.svg"
-import react from "../assets/logo/reactJs.svg"
-import reactQuery from "../assets/logo/reactQuery.svg"
-import tailwind from "../assets/logo/tailwindCss.svg"
-import viteJs from "../assets/logo/viteJs.svg"
-import vitest from "../assets/logo/vitest.svg"
-
-
-
+import css from "../assets/logo/css3.svg";
+import figma from "../assets/logo/figma.svg";
+import framer from "../assets/logo/FrameMotion.svg";
+import html from "../assets/logo/html5.svg";
+import javascript from "../assets/logo/javaScript.svg";
+import mu5 from "../assets/logo/MaterialUI.svg";
+import mysql from "../assets/logo/mySQL.svg";
+import node from "../assets/logo/nodejs.svg";
+import php from "../assets/logo/php.svg";
+import react from "../assets/logo/reactJs.svg";
+import reactQuery from "../assets/logo/reactQuery.svg";
+import tailwind from "../assets/logo/tailwindCss.svg";
+import viteJs from "../assets/logo/viteJs.svg";
+import vitest from "../assets/logo/vitest.svg";
 
 export const imagesData = [
   {
