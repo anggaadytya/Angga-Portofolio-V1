@@ -103,5 +103,5 @@ export const imagesHome = {
   circle,
   react,
   node,
-  mu5,
+  tailwind,
 };

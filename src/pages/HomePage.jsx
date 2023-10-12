@@ -14,7 +14,7 @@ const HomePage = () => {
   };
 
   return (
-    <div className="app__header app__flex">
+    <div className="app__header app__flex ">
       <motion.div
         whileInView={{ x: [-100, 0], opacity: [0, 1] }}
         transition={{ duration: 0.5 }}
@@ -56,7 +56,7 @@ const HomePage = () => {
         whileInView={scaleVariants.whileInView}
         className="app__header-circles"
       >
-        {[imagesHome.node, imagesHome.react, imagesHome.mu5].map((circle, index) => (
+        {[imagesHome.node, imagesHome.react, imagesHome.tailwind].map((circle, index) => (
           <div className="circle-cmp app__flex" key={`circle-${index}`}>
             <img src={circle} alt="profile_bg" />
           </div>

@@ -72,7 +72,7 @@ const NavigasiBar = () => {
       <div className="container mx-auto flex items-center justify-between text-blue-gray-900">
         <Typography
           
-          href="#"
+          href="/"
           className="mr-4 cursor-pointer py-1.5 font-medium"
         >
           Angga Adytya
