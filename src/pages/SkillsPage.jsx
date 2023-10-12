@@ -1,22 +1,9 @@
 import { motion } from "framer-motion";
-import { imagesData } from "../utils/images";
-import { Tooltip } from "@material-tailwind/react";
+import { useState } from "react";
+import { Link, Outlet} from "react-router-dom";
+import TechStack from "../components/TechStack";
 
 const SkillsPage = () => {
-  const scaleVariants = {
-    whileInView: {
-      scale: [0, 1],
-      opacity: [0, 1],
-      transition: {
-        duration: 1,
-        ease: "easeInOut",
-      },
-    },
-    whileHover: {
-      scale: [1, 1.2],
-    },
-  };
-
   const skillsVariants = {
     whileInView: {
       y: [-100, 0],
@@ -28,6 +15,12 @@ const SkillsPage = () => {
     },
   };
 
+  const [params, setParams] = useState('skills')
+
+  const handleParams = (newParams) => {
+    setParams(newParams)
+  }
+
   return (
     <div className="container pt-4 md:py-20 mx-auto">
       <motion.ul
@@ -37,45 +30,14 @@ const SkillsPage = () => {
       >
         <li className="text-center head-text md:text-4xl py-8 link link-underline link-underline-black">
           {" "}
-          <a href="3">TECH STACK</a>
+          <Link to="techstack" onClick={() => handleParams("techstack")}>TECH STACK</Link>
         </li>
         <li className="text-center head-text md:text-4xl py-8 link link-underline link-underline-black">
           {" "}
-          <a href="#">CERTIFICATE</a>
+          <Link to="certificate" onClick={() => handleParams("certificate")}>CERTIFICATE</Link>
         </li>
       </motion.ul>
-
-      <motion.div className=" grid grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-5 px-2 md:gap-32">
-        {imagesData.map((circle, index) => (
-          <motion.div
-            variants={scaleVariants}
-            whileInView={scaleVariants.whileInView}
-            whileHover={scaleVariants.whileHover}
-            key={`circle-${index}`}
-            className="w-[60px] h-[60px] md:w-[100px] md:h-[100px] rounded-full bg-white shadow-2xl mx-auto cursor-pointer"
-          >
-            <div className="flex my-3 md:my-4 justify-center items-center relative">
-              <Tooltip
-                content={circle.name}
-                animate={{
-                  mount: { scale: 1, y: 0 },
-                  unmount: { scale: 0, y: 45 },
-                  DelayNode: 0.5,
-                }}
-                className="bg-white shadow-xl text-black tracking-widest text-md font-normal absolute left-1/2 -translate-x-1/2 top-1/2 -translate-y-1/2"
-                placement="top"
-              >
-                <img
-                  src={circle.img}
-                  alt="profile_bg"
-                  className="flex w-[70%] h-[70%]"
-                />
-              </Tooltip>
-            </div>
-          </motion.div>
-        ))}
-      </motion.div>
-
+      {params == "skills" ? <TechStack /> : <Outlet />}
     </div>
   );
 };

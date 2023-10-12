@@ -1,11 +1,12 @@
 import { useEffect, useState } from "react";
 import {
   Navbar,
-  MobileNav,
   Typography,
   Button,
   IconButton,
+  Collapse,
 } from "@material-tailwind/react";
+
 
 const NavigasiBar = () => {
   const [openNav, setOpenNav] = useState(false);
@@ -37,7 +38,7 @@ const NavigasiBar = () => {
         className="p-1 font-normal hover:bg-blue-gray-300 hover:text-white hover:rounded-lg"
         onClick={() => setOpenNav(false)}
       >
-        <a href="skills" className="flex items-center">
+        <a href="/skills" className="flex items-center">
           Skills
         </a>
       </Typography>
@@ -48,7 +49,7 @@ const NavigasiBar = () => {
         className="p-1 font-normal hover:bg-blue-gray-300 hover:text-white hover:rounded-lg"
         onClick={() => setOpenNav(false)}
       >
-        <a href="project" className="flex items-center">
+        <a href="/project" className="flex items-center">
           Project
         </a>
       </Typography>
@@ -59,7 +60,7 @@ const NavigasiBar = () => {
         className="p-1 font-normal hover:bg-blue-gray-300 hover:text-white hover:rounded-lg"
         onClick={() => setOpenNav(false)}
       >
-        <a href="about" className="flex items-center">
+        <a href="/about" className="flex items-center">
           Abouts
         </a>
       </Typography>
@@ -70,16 +71,16 @@ const NavigasiBar = () => {
     <Navbar className="mx-auto max-w-screen-xl py-2 px-4 lg:px-8 lg:py-4">
       <div className="container mx-auto flex items-center justify-between text-blue-gray-900">
         <Typography
-          as="a"
+          
           href="#"
           className="mr-4 cursor-pointer py-1.5 font-medium"
         >
           Angga Adytya
         </Typography>
         <div className="hidden lg:block">{navList}</div>
-        <Button variant="gradient" size="sm" className="hidden lg:inline-block">
+        <button  size="sm" className="hidden lg:inline-block">
           <span>Hallo</span>
-        </Button>
+        </button>
         <IconButton
           variant="text"
           className="ml-auto h-6 w-6 text-inherit hover:bg-transparent focus:bg-transparent active:bg-transparent lg:hidden"
@@ -118,14 +119,14 @@ const NavigasiBar = () => {
           )}
         </IconButton>
       </div>
-      <MobileNav open={openNav}>
+      <Collapse open={openNav}>
         <div className="container mx-auto">
           {navList}
           <Button variant="gradient" size="sm" fullWidth className="mb-2">
             <span>Hallo</span>
           </Button>
         </div>
-      </MobileNav>
+      </Collapse>
     </Navbar>
   );
 };
