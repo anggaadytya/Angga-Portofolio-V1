@@ -1,10 +1,9 @@
-
 const AboutPage = () => {
   return (
-    <div>
-        <h1>About</h1>
+    <div className="pt-4 md:py-20">
+      <h1 className="text-center head-text">Comming Soon About</h1>
     </div>
-  )
-}
+  );
+};
 
-export default AboutPage
+export default AboutPage;
