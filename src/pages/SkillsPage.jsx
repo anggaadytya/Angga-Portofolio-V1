@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { useState } from "react";
-import { Link, Outlet} from "react-router-dom";
+import { Link, Outlet } from "react-router-dom";
 import TechStack from "../components/TechStack";
 
 const SkillsPage = () => {
@@ -15,11 +15,12 @@ const SkillsPage = () => {
     },
   };
 
-  const [params, setParams] = useState('skills')
+  const [params, setParams] = useState("skills");
+  const [active, setActive] = useState("techstack");
 
   const handleParams = (newParams) => {
-    setParams(newParams)
-  }
+    setParams(newParams);
+  };
 
   return (
     <div className="container pt-4 md:py-20 mx-auto">
@@ -30,11 +31,25 @@ const SkillsPage = () => {
       >
         <li className="text-center head-text md:text-4xl py-8 link link-underline link-underline-black">
           {" "}
-          <Link to="techstack" onClick={() => handleParams("techstack")}>TECH STACK</Link>
+          <Link
+            to="techstack"
+            onClick={() => handleParams("techstack") || setActive("techstack")}
+            className={active === "techstack" ? "link-underline-active" : ""}
+          >
+            TECH STACK
+          </Link>
         </li>
         <li className="text-center head-text md:text-4xl py-8 link link-underline link-underline-black">
           {" "}
-          <Link to="certificate" onClick={() => handleParams("certificate")}>CERTIFICATE</Link>
+          <Link
+            to="certificate"
+            onClick={() =>
+              handleParams("certificate") || setActive("certificate")
+            }
+            className={active === "certificate" ? "link-underline-active" : ""}
+          >
+            CERTIFICATE
+          </Link>
         </li>
       </motion.ul>
       {params == "skills" ? <TechStack /> : <Outlet />}

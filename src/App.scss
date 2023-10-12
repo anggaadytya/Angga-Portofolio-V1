@@ -421,6 +421,11 @@
     background-position: 0 90%
 }
 
+.link-underline-active{
+  background-size: 100% 3px;
+  background-position: 0 90%
+}
+
 @media screen and (max-width: 768px) {
 
   .link-underline {

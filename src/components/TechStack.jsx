@@ -23,7 +23,7 @@ const TechStack = () => {
         <motion.div
           variants={scaleVariants}
           whileInView={scaleVariants.whileInView}
-          whileHover={scaleVariants.whileHover}
+          // whileHover={scaleVariants.whileHover}
           key={`circle-${index}`}
           className="w-[60px] h-[60px] md:w-[100px] md:h-[100px] rounded-full bg-white shadow-2xl mx-auto cursor-pointer"
         >
