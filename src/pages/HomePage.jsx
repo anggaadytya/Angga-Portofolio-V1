@@ -1,5 +1,7 @@
 import { motion } from "framer-motion";
 import { imagesHome } from "../utils/images"
+import {HiOutlineDownload} from 'react-icons/hi'
+import CV from "../assets/resume/CV-ANGGA-ADYTYA.pdf"
 
 const HomePage = () => {
   const scaleVariants = {
@@ -22,7 +24,7 @@ const HomePage = () => {
       >
         <div className="app__header-badge">
           <div className="badge-cmp app__flex">
-            <span>👋</span>
+            <span className="animate-waving-hand">👋</span>
             <div style={{ marginLeft: 20 }}>
               <p className="p-text">Hello, I am</p>
               <h1 className="head-text">Angga Adytya</h1>
@@ -33,7 +35,12 @@ const HomePage = () => {
             <p className="p-text">FullStack Web Developer</p>
             <p className="p-text">React JS</p>
           </div>
+
+          <button className="tag-cmp app__flex transition-all ">
+            <a href={CV} className="p-text tracking-wide flex items-center gap-2" download={true}>RESUME <HiOutlineDownload className="animate-bounce h-5 w-5 " /></a>
+          </button>
         </div>
+        
       </motion.div>
 
       <motion.div
