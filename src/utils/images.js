@@ -14,7 +14,7 @@ import html from "../assets/logo/html5.svg";
 import javascript from "../assets/logo/javaScript.svg";
 import mu5 from "../assets/logo/MaterialUI.svg";
 import mysql from "../assets/logo/mySQL.svg";
-import node from "../assets/logo/nodejs.svg";
+import node from "../assets/logo/nodeJs.svg";
 import php from "../assets/logo/php.svg";
 import react from "../assets/logo/reactJs.svg";
 import reactQuery from "../assets/logo/reactQuery.svg";
