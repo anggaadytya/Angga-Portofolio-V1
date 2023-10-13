@@ -26,9 +26,9 @@ const ProjectPage = () => {
             variants={scaleVariants}
             whileInView={scaleVariants.whileInView}
             key={index}
-            className=" rounded-2xl pb-4 shadow-2xl border-2 border-gray-500 relative mx-4 md:mx-0 h-[22em] md:h-[27em] lg:h-[28em]"
+            className=" rounded-2xl pb-4 shadow-2xl border-2 border-gray-500 relative mx-4 md:mx-0 h-[22em] md:h-[20em] lg:h-[19em]"
           >
-            <div className="absolute top-0 right-0 text-white bg-cyan-600 px-4 py-1 rounded-bl-lg rounded-tr-lg text-xs tracking-widest">
+            <div className="absolute top-0 right-0 text-white bg-cyan-600 px-4 py-1 rounded-bl-lg rounded-tr-xl text-xs tracking-widest">
               <p>{project.label}</p>
             </div>
             <img
@@ -36,14 +36,14 @@ const ProjectPage = () => {
               alt=""
               width={1000}
               height={1000}
-              className="rounded-t-2xl h-[200px] w-full md:h-[300px] object-cover"
+              className="rounded-t-2xl h-[11em] w-full md:h-[12em] lg:h-[11em] object-cover"
             />
             <div className="ps-2 py-2">
               <h1 className="text-sm font-bold tracking-wide pb-2">
                 {project.title}
               </h1>
               <p className="text-xs tracking-wide">{project.subtitle}</p>
-              <div className="absolute bottom-5 gap-4 flex">
+              <div className="absolute bottom-5 gap-4 md:gap-3 flex">
                 {project.tech.map((tech, index) => (
                   <img
                     key={index}
@@ -51,7 +51,7 @@ const ProjectPage = () => {
                     alt=""
                     width={30}
                     height={30}
-                    className=""
+                    className="w-8 h-8 md:h-6 md:w-6 lg: object-contain"
                   />
                 ))}
               </div>

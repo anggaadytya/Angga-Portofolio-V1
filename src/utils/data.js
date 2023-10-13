@@ -108,4 +108,11 @@ export const projectData = [
     subtitle: "Dashboard Notes",
     tech: [react, tailwind, viteJs],
   },
+  {
+    img: about2,
+    label: "FrontEnd",
+    title: "Admin DashBoard",
+    subtitle: "Dashboard Admin",
+    tech: [html, css, javascript],
+  },
 ];
