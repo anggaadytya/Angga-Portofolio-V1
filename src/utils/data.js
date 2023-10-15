@@ -1,7 +1,19 @@
+import certifBackEnd from "../assets/certificate/certifBackEnd.png";
+import certifFrontEnd from "../assets/certificate/certifFrontEnd.png";
+import certifDasarWeb from "../assets/certificate/certifDasarWeb.png";
+import certifJava from "../assets/certificate/certifJava.png";
+import certifC from "../assets/certificate/certifC.png";
+import certifCloud from "../assets/certificate/certifCloud.png";
+import certifJavaScript from "../assets/certificate/certifJavaScript.png";
+import certifReact from "../assets/certificate/certifReact.png";
+
 import about1 from "../assets/images/about01.png";
 import about2 from "../assets/images/about02.png";
 import about3 from "../assets/images/about03.png";
 import about4 from "../assets/images/about04.png";
+
+import SISPARCABAI from "../assets/projects/SISPARCABAI.png";
+
 
 import bootstrap from "../assets/logo/bootstrap.svg";
 import css from "../assets/logo/css3.svg";
@@ -21,52 +33,52 @@ import vitest from "../assets/logo/vitest.svg";
 
 export const certifData = [
   {
-    img: about1,
+    img: certifReact,
     title: "Belajar Membuat Aplikasi Web dengan React",
     body: "Dicoding Indonesia",
   },
   {
-    img: about2,
+    img: certifFrontEnd,
     title: "Belajar Membuat Front-End Web untuk Pemula",
     body: "Dicoding Indonesia",
   },
   {
-    img: about3,
+    img: certifDasarWeb,
     title: "Belajar Dasar Pemograman Web",
     body: "Dicoding Indonesia",
   },
   {
-    img: about4,
+    img: certifBackEnd,
     title: "Belajar Membuat Aplikasi Back-End untuk Pemula",
     body: "Dicoding Indonesia",
   },
   {
-    img: about1,
+    img: certifCloud,
     title: "Cloud Practitioner Essentials (Belajar Dasar AWS Cloud)",
     body: "Dicoding Indonesia",
   },
   {
-    img: about2,
+    img: certifJavaScript,
     title: "Belajar Dasar Pemograman JavaScript",
     body: "Dicoding Indonesia",
   },
   {
-    img: about3,
+    img: certifJava,
     title: "Memulai Pemograman Dengan Java",
     body: "Dicoding Indonesia",
   },
   {
-    img: about4,
+    img: certifC,
     title: "Memulai Pemograman Dengan C",
     body: "Dicoding Indonesia",
   },
   {
-    img: about1,
+    img: certifJavaScript,
     title: "JavaScript",
     body: "Sololearn",
   },
   {
-    img: about2,
+    img: certifC,
     title: "PHP",
     body: "Sololearn",
   },
@@ -74,7 +86,7 @@ export const certifData = [
 
 export const projectData = [
   {
-    img: about1,
+    img: SISPARCABAI,
     label: "FullStack",
     title: "SISPAR-CABAI",
     subtitle: "Sistem Pakar Deteksi Hama dan Penyakit Tanaman Cabai",

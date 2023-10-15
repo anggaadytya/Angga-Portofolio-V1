@@ -7,7 +7,6 @@ import {
   Collapse,
 } from "@material-tailwind/react";
 
-
 const NavigasiBar = () => {
   const [openNav, setOpenNav] = useState(false);
 
@@ -24,7 +23,7 @@ const NavigasiBar = () => {
         as="li"
         variant="small"
         color="blue-gray"
-        className="p-1 font-normal hover:bg-blue-gray-300 hover:text-white hover:rounded-lg"
+        className="p-1 font-normal"
         onClick={() => setOpenNav(false)}
       >
         <a href="/" className="flex items-center">
@@ -35,7 +34,7 @@ const NavigasiBar = () => {
         as="li"
         variant="small"
         color="blue-gray"
-        className="p-1 font-normal hover:bg-blue-gray-300 hover:text-white hover:rounded-lg"
+        className="p-1 font-normal"
         onClick={() => setOpenNav(false)}
       >
         <a href="/skills" className="flex items-center">
@@ -46,10 +45,10 @@ const NavigasiBar = () => {
         as="li"
         variant="small"
         color="blue-gray"
-        className="p-1 font-normal hover:bg-blue-gray-300 hover:text-white hover:rounded-lg"
+        className="p-1 font-normal link-underline"
         onClick={() => setOpenNav(false)}
       >
-        <a href="/project" className="flex items-center">
+        <a href="/project" className="flex items-center link-underline">
           Project
         </a>
       </Typography>
@@ -57,10 +56,10 @@ const NavigasiBar = () => {
         as="li"
         variant="small"
         color="blue-gray"
-        className="p-1 font-normal hover:bg-blue-gray-300 hover:text-white hover:rounded-lg"
+        className="p-1 font-normal"
         onClick={() => setOpenNav(false)}
       >
-        <a href="/about" className="flex items-center">
+        <a href="/about" className="flex items-center link-underline-active">
           Abouts
         </a>
       </Typography>
@@ -70,15 +69,11 @@ const NavigasiBar = () => {
   return (
     <Navbar className="mx-auto max-w-screen-xl py-2 px-4 lg:px-8 lg:py-4">
       <div className="container mx-auto flex items-center justify-between text-blue-gray-900">
-        <Typography
-          
-          href="/"
-          className="mr-4 cursor-pointer py-1.5 font-medium"
-        >
+        <Typography href="/" className="mr-4 cursor-pointer py-1.5 font-medium">
           Angga Adytya
         </Typography>
         <div className="hidden lg:block">{navList}</div>
-        <Button variant="gradient"  size="sm" className="hidden lg:inline-block">
+        <Button variant="gradient" size="sm" className="hidden lg:inline-block">
           <span>Hallo</span>
         </Button>
         <IconButton

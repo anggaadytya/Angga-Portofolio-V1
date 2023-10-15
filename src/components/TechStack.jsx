@@ -18,14 +18,14 @@ const TechStack = () => {
   };
 
   return (
-    <motion.div className=" grid grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-5 px-2 md:gap-32">
+    <motion.div className=" grid grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4 px-2 md:gap-[5rem] mx-auto">
       {imagesData.map((circle, index) => (
         <motion.div
           variants={scaleVariants}
           whileInView={scaleVariants.whileInView}
           // whileHover={scaleVariants.whileHover}
           key={`circle-${index}`}
-          className="w-[60px] h-[60px] md:w-[100px] md:h-[100px] rounded-full bg-white shadow-2xl mx-auto cursor-pointer"
+          className="w-[60px] h-[60px] md:w-[90px] md:h-[90px] rounded-full bg-white shadow-2xl cursor-pointer mx-auto"
         >
           <div className="flex my-3 md:my-4 justify-center items-center relative">
             <Tooltip
@@ -41,7 +41,7 @@ const TechStack = () => {
               <img
                 src={circle.img}
                 alt="profile_bg"
-                className="flex w-[70%] h-[70%]"
+                className="flex w-[60%] h-[60%]"
               />
             </Tooltip>
           </div>

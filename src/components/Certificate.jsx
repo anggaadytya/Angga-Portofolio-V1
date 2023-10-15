@@ -17,7 +17,7 @@ const Certificate = () => {
   };
 
   return (
-    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 mx-4 gap-5 mb-10 md:mb-0">
+    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 mx-10 gap-4 mb-10 md:mb-0">
       {certifData.map((certif, index) => {
         return (
           <motion.div
@@ -29,9 +29,7 @@ const Certificate = () => {
             <img
               src={certif.img}
               alt=""
-              width={500}
-              height={500}
-              className="rounded-t-2xl"
+              className="rounded-t-2xl h-[10rem] w-full object-cover md:h-[14rem]"
             />
             <div className="ps-2 py-2">
               <h1 className="text-sm font-bold tracking-wide pb-2">
