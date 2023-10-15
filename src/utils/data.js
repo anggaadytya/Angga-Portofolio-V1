@@ -31,6 +31,10 @@ import tailwind from "../assets/logo/tailwindCss.svg";
 import viteJs from "../assets/logo/viteJs.svg";
 import vitest from "../assets/logo/vitest.svg";
 
+
+import {BsGithub, BsInstagram, BsLinkedin, BsFacebook, BsWhatsapp, } from "react-icons/bs";
+import {BiLogoGmail} from "react-icons/bi";
+
 export const certifData = [
   {
     img: certifReact,
@@ -72,16 +76,7 @@ export const certifData = [
     title: "Memulai Pemograman Dengan C",
     body: "Dicoding Indonesia",
   },
-  {
-    img: certifJavascript,
-    title: "JavaScript",
-    body: "Sololearn",
-  },
-  {
-    img: certifC,
-    title: "PHP",
-    body: "Sololearn",
-  },
+
 ];
 
 export const projectData = [
@@ -128,3 +123,32 @@ export const projectData = [
     tech: [html, css, javascript],
   },
 ];
+
+
+export const contactData = [
+  {
+    img: BsGithub,
+    name: "Github",
+    link: "https://github.com/angga-adytya",
+    color: "bg-black"
+  },
+  {
+    img: BsLinkedin,
+    name: "LinkedIn",
+    link: "https://www.linkedin.com/in/muhammad-angga-adytya/",
+    color: "bg-blue-700"
+  },
+  {
+    img: BsInstagram,
+    name: "Instagram",
+    link: "https://www.instagram.com/angga_adytya/",
+    color: "bg-pink-500"
+  },
+  // {
+  //   img: BsFacebook,
+  //   name: "Facebook",
+  //   link: "https://twitter.com/angga_adytya",
+  //   color: "bg-blue-700"
+  // }
+  
+]

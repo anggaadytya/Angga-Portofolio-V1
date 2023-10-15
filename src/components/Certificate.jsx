@@ -1,19 +1,20 @@
 import { certifData } from "../utils/data";
 import { motion } from "framer-motion";
+import { useState } from "react";
+import { AiOutlineLink } from "react-icons/ai";
 
 const Certificate = () => {
-  const scaleVariants = {
-    whileInView: {
-      scale: [0, 1],
-      opacity: [0, 1],
-      transition: {
-        duration: 1,
-        ease: "easeInOut",
-      },
-    },
-    whileHover: {
-      scale: [1, 1.2],
-    },
+  const [modalOpen, setModalOpen] = useState(false);
+  const [selectedImage, setSelectedImage] = useState(null);
+
+  const handleOpenModal = (index) => {
+    setSelectedImage(index);
+    setModalOpen(true);
+  };
+
+  const handleCloseModal = () => {
+    setSelectedImage(null);
+    setModalOpen(false);
   };
 
   return (
@@ -21,16 +22,31 @@ const Certificate = () => {
       {certifData.map((certif, index) => {
         return (
           <motion.div
-            variants={scaleVariants}
-            whileInView={scaleVariants.whileInView}
+            initial={{ y: 100, opacity: 0 }}
+            whileInView={{ y: 0, opacity: 1 }}
+            whileHover={{ scale: 1.05 }}
+            transition={{ duration: 0.5 }}
             key={index}
-            className=" rounded-2xl pb-4 shadow-2xl border-2 border-gray-500 "
+            className=" rounded-2xl pb-4 shadow-2xl border-2 border-gray-500"
           >
-            <img
-              src={certif.img}
-              alt=""
-              className="rounded-t-2xl h-[10rem] w-full object-cover md:h-[14rem]"
-            />
+            <div className="relative">
+              <img
+                src={certif.img}
+                alt={certif.title}
+                onClick={() => handleOpenModal(index)}
+                className="rounded-t-2xl h-[10rem] w-full object-cover md:h-[14rem] cursor-pointer"
+              />
+              <div
+                className="overlay absolute inset-0 bg-black/30 rounded-t-lg cursor-pointer transition-all duration-75"
+                style={{ opacity: selectedImage === index ? 1 : 0 }}
+                onClick={() => handleOpenModal(index)}
+                onMouseEnter={() => setSelectedImage(index)}
+              >
+                <h1 className="text-center absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-white text-2xl font-bold">
+                  <AiOutlineLink />
+                </h1>
+              </div>
+            </div>
             <div className="ps-2 py-2">
               <h1 className="text-sm font-bold tracking-wide pb-2">
                 {certif.title}
@@ -40,8 +56,26 @@ const Certificate = () => {
           </motion.div>
         );
       })}
+      {modalOpen && (
+        <div className=" fixed top-0 left-0 w-full h-full flex items-center justify-center bg-black/50">
+          <div className="bg-white py-[30px] px-[15px] rounded-lg max-w-[95%] max-h-[95%] md:max-w-[80%] relative">
+            <img
+              src={certifData[selectedImage].img}
+              alt=""
+              className="max-w-full max-h-full object-cover"
+            />
+            <button
+              className="close-button absolute top-[2px] right-[2px] cursor-pointer text-sm font-bold ring-2 ring-black rounded-md px-1"
+              onClick={handleCloseModal}
+            >
+              X
+            </button>
+          </div>
+        </div>
+      )}
     </div>
   );
+  //...
 };
 
 export default Certificate;

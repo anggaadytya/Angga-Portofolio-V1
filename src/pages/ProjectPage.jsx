@@ -1,8 +1,12 @@
 import { projectData } from "../utils/data";
 import { motion } from "framer-motion";
+import { useState } from "react";
 
 
 const ProjectPage = () => {
+
+  const [modalOpen, setModalOpen] = useState(false);
+  const [selectedImage, setSelectedImage] = useState(null);
 
   const scaleVariants = {
     whileInView: {
@@ -13,12 +17,20 @@ const ProjectPage = () => {
         ease: "easeInOut",
       },
     },
-
     whileHover: {
       scale: [1, 1.1],
       transition: {},
     },
-    
+  };
+
+  const handleOpenModal = (index) => {
+    setSelectedImage(index);
+    setModalOpen(true);
+  };
+
+  const handleCloseModal = () => {
+    setSelectedImage(null);
+    setModalOpen(false);
   };
 
   return (
@@ -37,7 +49,8 @@ const ProjectPage = () => {
               </div>
               <img
                 src={project.img}
-                alt=""
+                alt={project.title}
+                onClick={() => handleOpenModal(index)}
                 width={1000}
                 height={1000}
                 className="rounded-t-2xl h-[11em] w-full md:h-[12em] lg:h-[11em] object-cover"
@@ -64,9 +77,23 @@ const ProjectPage = () => {
           );
         })}
       </div>
-      <h1 className="text-center font-semibold tracking-widest text-2xl ">
-        MASIH PROSES
-      </h1>
+      {modalOpen && (
+        <div className=" fixed top-0 left-0 w-full h-full flex items-center justify-center bg-black/50">
+          <div className="bg-white py-[30px] px-[15px] rounded-lg max-w-[80%] max-h-[80%] relative">
+            <img
+              src={projectData[selectedImage].img}
+              alt=""
+              className="max-w-full max-h-full object-cover"
+            />
+            <h1>{projectData[selectedImage].title}</h1>
+            <p>{projectData[selectedImage].subtitle}</p>
+            <button className="close-button absolute top-[2px] right-[2px] cursor-pointer text-sm font-bold ring-2 ring-black rounded-md px-1" onClick={handleCloseModal}>
+              X
+            </button>
+          </div>
+        </div>
+      )}
+    
     </>
   );
 };
