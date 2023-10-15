@@ -21,7 +21,7 @@ const AboutPage = () => {
           skills and dedication to the next level
         </p>
         <div className="container flex gap-4 items-center justify-center mx-auto py-5">
-          <div className="flex shadow-xl rounded-lg py-4 px-7 flex-col items-center">
+          <div className="flex shadow-xl rounded-lg py-4 px-6 flex-col items-center">
             <h1>Project</h1>
             <h2>{projectData.length} +</h2>
           </div>
@@ -29,7 +29,7 @@ const AboutPage = () => {
             <h1>Experience</h1>
             <h2>2 +</h2>
           </div>
-          <div className="flex shadow-xl rounded-lg py-4 px-10 flex-col items-center">
+          <div className="flex shadow-xl rounded-lg py-4 px-8 flex-col items-center">
             <h1>Age</h1>
             <h2>21 +</h2>
             <p></p>
