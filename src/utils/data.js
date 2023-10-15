@@ -4,7 +4,7 @@ import certifDasarWeb from "../assets/certificate/certifDasarWeb.png";
 import certifJava from "../assets/certificate/certifJava.png";
 import certifC from "../assets/certificate/certifC.png";
 import certifCloud from "../assets/certificate/certifCloud.png";
-import certifJavaScript from "../assets/certificate/certifJavaScript.png";
+import certifJavaScript from "../assets/certificate/certifJavascript.png";
 import certifReact from "../assets/certificate/certifReact.png";
 
 import about1 from "../assets/images/about01.png";
