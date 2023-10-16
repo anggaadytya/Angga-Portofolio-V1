@@ -58,7 +58,7 @@ const ProjectPage = () => {
       </div>
       {modalOpen && (
         <div className=" fixed top-0 left-0 w-full h-full flex items-center justify-center bg-black/50" >
-          <div className="bg-white flex flex-col md:flex-row gap-4 mx-3 w-full h-[60%] md:w-[60%] relative ">
+          <div className="bg-white flex flex-col md:flex-row gap-4 mx-3 w-full h-[70%] md:h-[60%] md:w-[80%]">
             <div className="md:flex-[50%] relative h-[400px]">
               {projectData[selectedImage] && (
                 <CarouselCustomNavigation
@@ -67,7 +67,7 @@ const ProjectPage = () => {
                 />
               )}
             </div>
-            <div className="relative bg-blue-gray-50 flex-1">
+            <div className="relative flex-1 ml-2">
               <h1 className="pt-2 font-bold tracking-wider">
                 {projectData[selectedImage].title}
               </h1>
@@ -79,7 +79,7 @@ const ProjectPage = () => {
                   return <img src={tech} className="h-6 w-6" key={index} />;
                 })}
               </div>
-              <div className="flex gap-5 py-2 ">
+              <div className="flex gap-5 py-4 ">
                 <button
                   className="bg-black text-white px-3 py-1 rounded-lg"
                   onClick={() => window.open(projectData[selectedImage].demo)}

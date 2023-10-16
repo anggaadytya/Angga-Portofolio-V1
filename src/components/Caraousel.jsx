@@ -7,7 +7,7 @@ export function CarouselCustomNavigation({ img, selectedImage }) {
 
   return (
     <Carousel
-      className=" md:h-[570px] lg:h-[580px] w-full"
+      className=" md:h-[570px] lg:h-[600px] w-full"
       activeIndex={selectedImage}
       navigation={({ setActiveIndex, activeIndex, length }) => (
         <div className="absolute bottom-4 left-2/4 z-50 flex -translate-x-2/4 gap-2">
