@@ -1,6 +1,7 @@
 import { projectData } from "../utils/data";
 import { motion } from "framer-motion";
 import { useState } from "react";
+import { CarouselCustomNavigation } from "../components/Caraousel";
 
 const ProjectPage = () => {
   const [modalOpen, setModalOpen] = useState(false);
@@ -33,72 +34,66 @@ const ProjectPage = () => {
 
   return (
     <>
-      <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-5 mb-10 md:mb-0 py-10 md:py-28 mx-1 md:mx-10 lg:mx-40">
+      <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-5 mb-10 md:mb-0 py-10 md:py-28 mx-1 md:mx-10 lg:mx-40">
         {projectData.map((project, index) => {
           return (
             <motion.div
               variants={scaleVariants}
               whileInView={scaleVariants.whileInView}
               key={index}
-              className=" rounded-2xl pb-4 shadow-2xl border-2 border-gray-500 relative mx-4 md:mx-0 h-[22em] md:h-[20em] lg:h-[19em] cursor-pointer"
+              className=" rounded-2xl shadow-2xl border-2 border-gray-500 relative mx-4 md:mx-0 h-[18em] cursor-pointer dark:bg-white"
             >
               <div className="absolute top-0 right-0 text-white bg-black px-4 py-1 rounded-bl-lg rounded-tr-xl text-xs tracking-widest">
                 <p>{project.label}</p>
               </div>
               <img
-                src={project.img}
+                src={project.img[0]}
                 alt={project.title}
                 onClick={() => handleOpenModal(index)}
-                width={1000}
-                height={1000}
-                className="rounded-t-2xl h-[11em] w-full md:h-[12em] lg:h-[11em] object-cover"
+                className="rounded-2xl h-full w-full object-cover"
               />
-              <div className="ps-2 py-2">
-                <h1 className="text-sm font-bold tracking-wide pb-2 dark:text-white">
-                  {project.title}
-                </h1>
-                <p className="text-xs tracking-wide dark:text-white pr-1">
-                  {project.subtitle}
-                </p>
-                <div className="absolute bottom-5 gap-4 md:gap-3 flex">
-                  {project.tech.map((tech, index) => (
-                    <img
-                      key={index}
-                      src={tech}
-                      alt=""
-                      width={30}
-                      height={30}
-                      className="w-8 h-8 md:h-6 md:w-6 lg: object-contain"
-                    />
-                  ))}
-                </div>
-              </div>
             </motion.div>
           );
         })}
       </div>
       {modalOpen && (
-        <div
-          className=" fixed top-0 left-0 w-full h-full flex items-center justify-center bg-black/50"
-          onClick={handleCloseModal}
-        >
-          <div className="bg-white py-2 px-2 md:py-[15px] md:px-[15px] rounded-lg max-w-[90%] h-[60%] md:max-w-[60%] md:h-[70%] relative">
-            <img
-              src={projectData[selectedImage].img}
-              alt=""
-              className="max-w-full max-h-full md:h-[70%] md:w-full object-contain rounded-t-lg"
-            />
-            <h1 className="pt-2 font-bold tracking-wider">
-              {projectData[selectedImage].title}
-            </h1>
-            <p className="p-text">
-              {projectData[selectedImage].subtitle}
-            </p>
-            <div className="absolute bottom-3 left-2 flex gap-5">
-              <button className="bg-black text-white px-3 py-1 rounded-lg" onClick={() => window.open(projectData[selectedImage].demo)}>
-                Demo
+        <div className=" fixed top-0 left-0 w-full h-full flex items-center justify-center bg-black/50" >
+          <div className="bg-white flex flex-col md:flex-row gap-4 mx-3 w-full h-[60%] md:w-[60%] relative ">
+            <div className="md:flex-[50%] relative h-[400px]">
+              {projectData[selectedImage] && (
+                <CarouselCustomNavigation
+                  img={projectData[selectedImage].img}
+                  selectedImage={selectedImage}
+                />
+              )}
+            </div>
+            <div className="relative bg-blue-gray-50 flex-1">
+              <h1 className="pt-2 font-bold tracking-wider">
+                {projectData[selectedImage].title}
+              </h1>
+              <h2 className="pt-2 font-bold tracking-wider">Introduction</h2>
+              <p className="p-text">{projectData[selectedImage].subtitle}</p>
+              <h2 className="pt-2 font-bold tracking-wider">Tech Stack :</h2>
+              <div className="flex gap-2">
+                {projectData[selectedImage].tech.map((tech, index) => {
+                  return <img src={tech} className="h-6 w-6" key={index} />;
+                })}
+              </div>
+              <div className="flex gap-5 py-2 ">
+                <button
+                  className="bg-black text-white px-3 py-1 rounded-lg"
+                  onClick={() => window.open(projectData[selectedImage].demo)}
+                >
+                  Demo
                 </button>
-              <button className="bg-black text-white px-3 py-1 rounded-lg" onClick={() => window.open(projectData[selectedImage].code)}>Github</button>
+                <button
+                  className="bg-black text-white px-3 py-1 rounded-lg"
+                  onClick={() => window.open(projectData[selectedImage].code)}
+                >
+                  Github
+                </button>
+                <button onClick={handleCloseModal}>X</button>
+              </div>
             </div>
           </div>
         </div>

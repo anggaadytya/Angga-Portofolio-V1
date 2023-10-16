@@ -81,7 +81,7 @@ export const certifData = [
 
 export const projectData = [
   {
-    img: SISPARCABAI,
+    img: [SISPARCABAI, AnggaPorto, KasApps, NotesApp],
     label: "FullStack",
     title: "SISPAR-CABAI",
     subtitle: "Sistem Pakar Deteksi Hama dan Penyakit Tanaman Cabai",
@@ -90,7 +90,7 @@ export const projectData = [
     tech: [react, bootstrap, node, mysql, viteJs],
   },
   {
-    img: AnggaPorto,
+    img: [AnggaPorto, SISPARCABAI],
     label: "FrontEnd",
     title: "Angga Porto",
     subtitle: "Portfolio Angga Adytya",
@@ -99,7 +99,7 @@ export const projectData = [
     tech: [react, tailwind, viteJs, framer, mu5],
   },
   {
-    img: DashboardGames,
+    img: [DashboardGames, AnggaPorto],
     label: "FrontEnd",
     title: "Games Dashboard",
     subtitle: "Dashboard Games",
@@ -108,7 +108,7 @@ export const projectData = [
     tech: [react, tailwind, viteJs],
   },
   {
-    img: KasApps,
+    img: [KasApps,DashboardGames],
     label: "FrontEnd",
     title: "Kas Apps",
     subtitle: "Dashboard Kas",
@@ -117,7 +117,7 @@ export const projectData = [
     tech: [react, tailwind, viteJs],
   },
   {
-    img: NotesApp,
+    img: [NotesApp,KasApps],
     label: "FrontEnd",
     title: "Notes Apps",
     subtitle: "Dashboard Notes",
