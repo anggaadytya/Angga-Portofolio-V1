@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState, useContext } from "react";
 import {
   Navbar,
   Typography,
@@ -6,9 +6,12 @@ import {
   IconButton,
   Collapse,
 } from "@material-tailwind/react";
+import { HiMoon, HiSun } from "react-icons/hi2";
+import { ThemeContext } from "../context/ThemeContext";
 
 const NavigasiBar = () => {
   const [openNav, setOpenNav] = useState(false);
+  const { theme, setTheme } = useContext(ThemeContext);
 
   useEffect(() => {
     window.addEventListener(
@@ -23,7 +26,7 @@ const NavigasiBar = () => {
         as="li"
         variant="small"
         color="blue-gray"
-        className="p-1 font-normal"
+        className="p-1 font-normal link-underline py2"
         onClick={() => setOpenNav(false)}
       >
         <a href="/" className="flex items-center">
@@ -34,7 +37,7 @@ const NavigasiBar = () => {
         as="li"
         variant="small"
         color="blue-gray"
-        className="p-1 font-normal"
+        className="p-1 font-normal link-underline py-2 "
         onClick={() => setOpenNav(false)}
       >
         <a href="/skills" className="flex items-center">
@@ -45,10 +48,10 @@ const NavigasiBar = () => {
         as="li"
         variant="small"
         color="blue-gray"
-        className="p-1 font-normal link-underline"
+        className="p-1 font-normal link-underline py-2"
         onClick={() => setOpenNav(false)}
       >
-        <a href="/project" className="flex items-center link-underline">
+        <a href="/project" className="flex items-center">
           Project
         </a>
       </Typography>
@@ -56,7 +59,7 @@ const NavigasiBar = () => {
         as="li"
         variant="small"
         color="blue-gray"
-        className="p-1 font-normal"
+        className="p-1 font-normal link-underline py-2"
         onClick={() => setOpenNav(false)}
       >
         <a href="/about" className="flex items-center link-underline-active">
@@ -74,7 +77,23 @@ const NavigasiBar = () => {
         </Typography>
         <div className="hidden lg:block">{navList}</div>
         <Button variant="gradient" size="sm" className="hidden lg:inline-block">
-          <span>Hallo</span>
+          {theme == "light" ? (
+            <HiMoon
+              className="text-[25px] bg-slate-200 text-white rounded-full p-1 cursor-pointer"
+              onClick={() => {
+                setTheme("dark");
+                localStorage.setItem("theme", "dark");
+              }}
+            />
+          ) : (
+            <HiSun
+              className="text-[25px] bg-slate-200 text-white rounded-full p-1 cursor-pointer"
+              onClick={() => {
+                setTheme("light");
+                localStorage.setItem("theme", "light");
+              }}
+            />
+          )}
         </Button>
         <IconButton
           variant="text"
@@ -117,8 +136,24 @@ const NavigasiBar = () => {
       <Collapse open={openNav}>
         <div className="container mx-auto">
           {navList}
-          <Button variant="gradient" size="sm" fullWidth className="mb-2">
-            <span>Hallo</span>
+          <Button variant="gradient" size="sm" fullWidth className="mb-2 flex justify-center items-center">
+            {theme == "light" ? (
+              <HiMoon
+                className="text-[25px] bg-slate-200 text-white rounded-full p-1 cursor-pointer"
+                onClick={() => {
+                  setTheme("dark");
+                  localStorage.setItem("theme", "dark");
+                }}
+              />
+            ) : (
+              <HiSun
+                className="text-[25px] bg-slate-200 text-white rounded-full p-1 cursor-pointer"
+                onClick={() => {
+                  setTheme("light");
+                  localStorage.setItem("theme", "light");
+                }}
+              />
+            )}
           </Button>
         </div>
       </Collapse>

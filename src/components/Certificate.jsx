@@ -48,34 +48,32 @@ const Certificate = () => {
               </div>
             </div>
             <div className="ps-2 py-2">
-              <h1 className="text-sm font-bold tracking-wide pb-2">
+              <h1 className="text-sm font-bold tracking-wide pb-2 dark:text-white">
                 {certif.title}
               </h1>
-              <p className="text-xs tracking-wide">{certif.body}</p>
+              <p className="text-xs tracking-wide dark:text-white">
+                {certif.body}
+              </p>
             </div>
           </motion.div>
         );
       })}
       {modalOpen && (
-        <div className=" fixed top-0 left-0 w-full h-full flex items-center justify-center bg-black/50">
-          <div className="bg-white py-[30px] px-[15px] rounded-lg max-w-[95%] max-h-[95%] md:max-w-[80%] relative">
+        <div
+          className=" fixed top-0 left-0 w-full h-full flex items-center justify-center bg-black/50"
+          onClick={handleCloseModal}
+        >
+          <div className="bg-white py-2 px-2 rounded-lg max-w-[95%] max-h-[95%] md:max-w-[70%] md:max-h-[70%] relative">
             <img
               src={certifData[selectedImage].img}
               alt=""
-              className="max-w-full max-h-full object-cover"
+              className="max-w-full max-h-[70%] "
             />
-            <button
-              className="close-button absolute top-[2px] right-[2px] cursor-pointer text-sm font-bold ring-2 ring-black rounded-md px-1"
-              onClick={handleCloseModal}
-            >
-              X
-            </button>
           </div>
         </div>
       )}
     </div>
   );
-  //...
 };
 
 export default Certificate;

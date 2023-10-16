@@ -16,14 +16,14 @@ const HomePage = () => {
   };
 
   return (
-    <div className="app__header app__flex ">
+    <div className="app__header flex justify-center items-center ">
       <motion.div
         whileInView={{ x: [-100, 0], opacity: [0, 1] }}
         transition={{ duration: 0.5 }}
         className="app__header-info"
       >
-        <div className="app__header-badge">
-          <div className="badge-cmp app__flex">
+        <div className="app__header-badge md:py-40">
+          <div className="badge-cmp app__flex ">
             <span className="animate-waving-hand">👋</span>
             <div style={{ marginLeft: 20 }}>
               <p className="p-text">Hello, I am</p>
@@ -31,7 +31,7 @@ const HomePage = () => {
             </div>
           </div>
 
-          <div className="tag-cmp app__flex">
+          <div className="tag-cmp app__flex dark:shadow-xl">
             <p className="p-text">FullStack Web Developer</p>
             <p className="p-text">React JS</p>
           </div>
@@ -46,7 +46,7 @@ const HomePage = () => {
       <motion.div
         whileInView={{ opacity: [0, 1] }}
         transition={{ duration: 0.5, delayChildren: 0.5 }}
-        className="app__header-img"
+        className="app__header-img "
       >
         <img src={imagesHome.imagesSide} alt="profile_bg" width={1000} height={1000}/>
         <motion.img
@@ -61,7 +61,7 @@ const HomePage = () => {
       <motion.div
         variants={scaleVariants}
         whileInView={scaleVariants.whileInView}
-        className="app__header-circles"
+        className="app__header-circles "
       >
         {[imagesHome.node, imagesHome.react, imagesHome.tailwind].map((circle, index) => (
           <div className="circle-cmp app__flex" key={`circle-${index}`}>

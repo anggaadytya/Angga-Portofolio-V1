@@ -2,9 +2,7 @@ import { projectData } from "../utils/data";
 import { motion } from "framer-motion";
 import { useState } from "react";
 
-
 const ProjectPage = () => {
-
   const [modalOpen, setModalOpen] = useState(false);
   const [selectedImage, setSelectedImage] = useState(null);
 
@@ -56,10 +54,12 @@ const ProjectPage = () => {
                 className="rounded-t-2xl h-[11em] w-full md:h-[12em] lg:h-[11em] object-cover"
               />
               <div className="ps-2 py-2">
-                <h1 className="text-sm font-bold tracking-wide pb-2">
+                <h1 className="text-sm font-bold tracking-wide pb-2 dark:text-white">
                   {project.title}
                 </h1>
-                <p className="text-xs tracking-wide">{project.subtitle}</p>
+                <p className="text-xs tracking-wide dark:text-white pr-1">
+                  {project.subtitle}
+                </p>
                 <div className="absolute bottom-5 gap-4 md:gap-3 flex">
                   {project.tech.map((tech, index) => (
                     <img
@@ -78,22 +78,31 @@ const ProjectPage = () => {
         })}
       </div>
       {modalOpen && (
-        <div className=" fixed top-0 left-0 w-full h-full flex items-center justify-center bg-black/50">
-          <div className="bg-white py-[30px] px-[15px] rounded-lg max-w-[80%] max-h-[80%] relative">
+        <div
+          className=" fixed top-0 left-0 w-full h-full flex items-center justify-center bg-black/50"
+          onClick={handleCloseModal}
+        >
+          <div className="bg-white py-2 px-2 md:py-[15px] md:px-[15px] rounded-lg max-w-[90%] h-[60%] md:max-w-[60%] md:h-[70%] relative">
             <img
               src={projectData[selectedImage].img}
               alt=""
-              className="max-w-full max-h-full object-cover"
+              className="max-w-full max-h-full md:h-[70%] md:w-full object-contain rounded-t-lg"
             />
-            <h1>{projectData[selectedImage].title}</h1>
-            <p>{projectData[selectedImage].subtitle}</p>
-            <button className="close-button absolute top-[2px] right-[2px] cursor-pointer text-sm font-bold ring-2 ring-black rounded-md px-1" onClick={handleCloseModal}>
-              X
-            </button>
+            <h1 className="pt-2 font-bold tracking-wider">
+              {projectData[selectedImage].title}
+            </h1>
+            <p className="p-text">
+              {projectData[selectedImage].subtitle}
+            </p>
+            <div className="absolute bottom-3 left-2 flex gap-5">
+              <button className="bg-black text-white px-3 py-1 rounded-lg" onClick={() => window.open(projectData[selectedImage].demo)}>
+                Demo
+                </button>
+              <button className="bg-black text-white px-3 py-1 rounded-lg" onClick={() => window.open(projectData[selectedImage].code)}>Github</button>
+            </div>
           </div>
         </div>
       )}
-    
     </>
   );
 };

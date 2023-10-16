@@ -7,12 +7,12 @@ import certifCloud from "../assets/certificate/certifCloud.png";
 import certifJavascript from "../assets/certificate/certifJavascript.png";
 import certifReact from "../assets/certificate/certifReact.png";
 
-import about1 from "../assets/images/about01.png";
-import about2 from "../assets/images/about02.png";
-import about3 from "../assets/images/about03.png";
-import about4 from "../assets/images/about04.png";
 
 import SISPARCABAI from "../assets/projects/SISPARCABAI.png";
+import AnggaPorto from "../assets/projects/AnggaPorto.png";
+import DashboardGames from "../assets/projects/DashboardGames.png";
+import KasApps from "../assets/projects/KasApps.png";
+import NotesApp from "../assets/projects/NotesApp.png";
 
 
 import bootstrap from "../assets/logo/bootstrap.svg";
@@ -32,8 +32,8 @@ import viteJs from "../assets/logo/viteJs.svg";
 import vitest from "../assets/logo/vitest.svg";
 
 
-import {BsGithub, BsInstagram, BsLinkedin, BsFacebook, BsWhatsapp, } from "react-icons/bs";
-import {BiLogoGmail} from "react-icons/bi";
+import {BsGithub, BsInstagram, BsLinkedin } from "react-icons/bs";
+
 
 export const certifData = [
   {
@@ -85,43 +85,47 @@ export const projectData = [
     label: "FullStack",
     title: "SISPAR-CABAI",
     subtitle: "Sistem Pakar Deteksi Hama dan Penyakit Tanaman Cabai",
+    demo: "https://sispar-cabai.vercel.app/",
+    code: "https://github.com/anggaadytya/SISPAR-CABAI",
     tech: [react, bootstrap, node, mysql, viteJs],
   },
   {
-    img: about2,
+    img: AnggaPorto,
     label: "FrontEnd",
     title: "Angga Porto",
     subtitle: "Portfolio Angga Adytya",
+    demo: "https://angga-adytya.vercel.app/",
+    code: "https://github.com/anggaadytya/angga_adytya",
     tech: [react, tailwind, viteJs, framer, mu5],
   },
   {
-    img: about3,
+    img: DashboardGames,
     label: "FrontEnd",
     title: "Games Dashboard",
     subtitle: "Dashboard Games",
+    demo: "https://films-dashboard.vercel.app/",
+    code: "https://github.com/anggaadytya/GamesDashboard",
     tech: [react, tailwind, viteJs],
   },
   {
-    img: about4,
+    img: KasApps,
     label: "FrontEnd",
     title: "Kas Apps",
     subtitle: "Dashboard Kas",
+    demo: "https://kas-apps.vercel.app/",
+    code: "https://github.com/anggaadytya/kasApps",
     tech: [react, tailwind, viteJs],
   },
   {
-    img: about1,
+    img: NotesApp,
     label: "FrontEnd",
     title: "Notes Apps",
     subtitle: "Dashboard Notes",
+    demo: "https://notes-apps-omega.vercel.app/",
+    code: "https://github.com/anggaadytya/Submission-React-Notes-Apps",
     tech: [react, tailwind, viteJs],
   },
-  {
-    img: about2,
-    label: "FrontEnd",
-    title: "Admin DashBoard",
-    subtitle: "Dashboard Admin",
-    tech: [html, css, javascript],
-  },
+
 ];
 
 
