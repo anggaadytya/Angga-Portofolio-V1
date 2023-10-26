@@ -34,7 +34,7 @@ const SkillsPage = () => {
           <Link
             to="techstack"
             onClick={() => handleParams("techstack") || setActive("techstack")}
-            className={`${active === "techstack" ? "link-underline-active" : ""} dark:text-white`}
+            className={`${active === "techstack" ? "link-underline-active" : ""} dark:text-white `}
           >
             TECH STACK
           </Link>

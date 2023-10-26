@@ -57,9 +57,9 @@ const ProjectPage = () => {
         })}
       </div>
       {modalOpen && (
-        <div className=" fixed top-0 left-0 w-full h-full flex items-center justify-center bg-black/50" >
-          <div className="bg-white flex flex-col md:flex-row gap-4 mx-3 w-full h-[70%] md:h-[60%] md:w-[80%]">
-            <div className="md:flex-[50%] relative h-[400px]">
+        <div className=" fixed top-0 left-0 w-full h-full flex items-center justify-center bg-black/50">
+          <div className="bg-white flex flex-col md:flex-row gap-4 mx-3 w-full">
+            <div className="md:flex-[50%] relative">
               {projectData[selectedImage] && (
                 <CarouselCustomNavigation
                   img={projectData[selectedImage].img}
@@ -67,32 +67,41 @@ const ProjectPage = () => {
                 />
               )}
             </div>
-            <div className="relative flex-1 ml-2">
+
+            <div className="relative flex-1 ml-2 py-5">
+              <div className="bg-black cursor-pointer hover:cursor-pointer">
+                <button
+                  className="absolute top-3 right-4 text-sm md:text-xl font-bold bg-black cursor-pointer h-5 w-5 md:h-10 md:w-10 rounded-lg text-white"
+                  onClick={handleCloseModal}
+                >
+                  X
+                </button>
+              </div>
               <h1 className="pt-2 font-bold tracking-wider">
                 {projectData[selectedImage].title}
               </h1>
               <h2 className="pt-2 font-bold tracking-wider">Introduction</h2>
               <p className="p-text">{projectData[selectedImage].subtitle}</p>
               <h2 className="pt-2 font-bold tracking-wider">Tech Stack :</h2>
-              <div className="flex gap-2">
+              <div className="flex gap-4 py-2">
                 {projectData[selectedImage].tech.map((tech, index) => {
-                  return <img src={tech} className="h-6 w-6" key={index} />;
+                  return <img src={tech} className="h-5 w-5 md:h-7 md:w-7" key={index} />;
                 })}
               </div>
               <div className="flex gap-5 py-4 ">
                 <button
-                  className="bg-black text-white px-3 py-1 rounded-lg"
+                  className="bg-black text-white text-sm w-14 h-8 md:h-10 md:w-20 rounded-lg tracking-wider"
                   onClick={() => window.open(projectData[selectedImage].demo)}
                 >
                   Demo
                 </button>
                 <button
-                  className="bg-black text-white px-3 py-1 rounded-lg"
+                  className="bg-black text-white text-sm w-14 h-8 md:h-10 md:w-20 rounded-lg tracking-wider"
                   onClick={() => window.open(projectData[selectedImage].code)}
                 >
                   Github
                 </button>
-                <button onClick={handleCloseModal}>X</button>
+               
               </div>
             </div>
           </div>

@@ -26,7 +26,7 @@ const NavigasiBar = () => {
         as="li"
         variant="small"
         color="blue-gray"
-        className="p-1 font-normal link-underline py2"
+        className="p-1 font-normal link link-underline link-underline-black py-2"
         onClick={() => setOpenNav(false)}
       >
         <a href="/" className="flex items-center">
@@ -37,7 +37,7 @@ const NavigasiBar = () => {
         as="li"
         variant="small"
         color="blue-gray"
-        className="p-1 font-normal link-underline py-2 "
+        className="p-1 font-normal link link-underline link-underline-black py-2 "
         onClick={() => setOpenNav(false)}
       >
         <a href="/skills" className="flex items-center">
@@ -48,7 +48,7 @@ const NavigasiBar = () => {
         as="li"
         variant="small"
         color="blue-gray"
-        className="p-1 font-normal link-underline py-2"
+        className="p-1 font-normal link link-underline link-underline-black py-2"
         onClick={() => setOpenNav(false)}
       >
         <a href="/project" className="flex items-center">
@@ -59,7 +59,7 @@ const NavigasiBar = () => {
         as="li"
         variant="small"
         color="blue-gray"
-        className="p-1 font-normal link-underline py-2"
+        className="p-1 font-normal link link-underline link-underline-black py-2"
         onClick={() => setOpenNav(false)}
       >
         <a href="/about" className="flex items-center link-underline-active">

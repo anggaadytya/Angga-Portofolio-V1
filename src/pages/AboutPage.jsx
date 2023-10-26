@@ -26,16 +26,16 @@ const AboutPage = () => {
           skills and dedication to the next level
         </p>
         <div className="container flex gap-4 items-center justify-center mx-auto py-5">
-          <div className="flex shadow-xl rounded-lg py-4 px-6 flex-col items-center dark:bg-white">
-            <h1>Project</h1>
+          <div className="flex shadow-xl rounded-lg w-20 md:w-28 py-4 flex-col items-center dark:bg-white">
+            <h1 className="text-sm">Project</h1>
             <h2>{projectData.length} +</h2>
           </div>
-          <div className="flex shadow-xl rounded-lg py-4 px-4 flex-col items-center dark:bg-white">
-            <h1>Experience</h1>
+          <div className="flex shadow-xl rounded-lg w-20 md:w-28 py-4 flex-col items-center dark:bg-white">
+            <h1 className="text-sm">Experience</h1>
             <h2>2 +</h2>
           </div>
-          <div className="flex shadow-xl rounded-lg py-4 px-8 flex-col items-center dark:bg-white">
-            <h1>Age</h1>
+          <div className="flex shadow-xl rounded-lg w-20 md:w-28 py-4 flex-col items-center dark:bg-white">
+            <h1 className="text-sm">Age</h1>
             <h2>21 +</h2>
             <p></p>
           </div>
