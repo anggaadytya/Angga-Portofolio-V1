@@ -9,7 +9,7 @@
 ## Technology Stack
 - Tailwind
 - Vite.js
-- ![preview](src/assets/logo/FrameMotion.svg)
+![preview](src/assets/logo/FrameMotion.svg)
 
 
 ## DEMO Website
