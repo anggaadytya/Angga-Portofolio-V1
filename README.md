@@ -9,8 +9,7 @@
 ## Technology Stack
 - Tailwind
 - Vite.js
-- Framer
-- <i class="material-icons">face</i>
+- ![preview](src/assets/logo/FrameMotion.svg)
 
 
 ## DEMO Website
