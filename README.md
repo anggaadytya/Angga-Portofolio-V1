@@ -13,3 +13,6 @@
 
 ## DEMO Website
 - https://angga-adytya.vercel.app/
+
+## Preview
+![Preview](src/assets/projects/AnggaPorto.png)
