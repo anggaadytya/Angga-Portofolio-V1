@@ -10,6 +10,8 @@
 - Tailwind
 - Vite.js
 - Framer
+- <i class="material-icons">face</i>
+
 
 ## DEMO Website
 - https://angga-adytya.vercel.app/
