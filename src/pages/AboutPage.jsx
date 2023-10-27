@@ -1,14 +1,16 @@
 import ButtonIcon from "../components/ButtonIcon";
 import { projectData, contactData } from "../utils/data";
 import { motion } from "framer-motion";
+import { Email } from "../components/Email";
 
 const AboutPage = () => {
   return (
-    <motion.div 
-    initial={{ opacity: 0, y: 100 }}
-    whileInView={{ opacity: 1, y: 0 }}
-    transition={{ duration: 1 }}
-    className="py-10 md:py-28 container mx-auto ">
+    <motion.div
+      initial={{ opacity: 0, y: 100 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 1 }}
+      className="py-10 md:py-28 container mx-auto "
+    >
       <div className="mx-6">
         <h1 className="text-3xl dark:text-white">About</h1>
         <p className="p-text pt-3 text-justify leading-loose tracking-wide">
@@ -48,9 +50,18 @@ const AboutPage = () => {
         </p>
         <div className="flex gap-2 md:gap-4 pt-3 container mx-auto ">
           {contactData.map((contact, index) => (
-            <ButtonIcon key={index} title={contact.name} icons={contact.img} link={contact.link} color={contact.color}/>
+            <ButtonIcon
+              key={index}
+              title={contact.name}
+              icons={contact.img}
+              link={contact.link}
+              color={contact.color}
+            />
           ))}
         </div>
+      </div>
+      <div className="py-10 mx-6">
+        <Email />
       </div>
     </motion.div>
   );
