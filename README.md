@@ -7,8 +7,9 @@
 - NPM Version: 9.8.1
 
 ## Technology Stack
-- Tailwind
-- Vite.js
+
+![preview](src/assets/logo/viteJs.svg)
+![preview](src/assets/logo/tailwindCss.svg)
 ![preview](src/assets/logo/FrameMotion.svg)
 
 
