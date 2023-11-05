@@ -68,10 +68,6 @@ export const imagesData = [
     img: react,
   },
   {
-    name: "React Query",
-    img: reactQuery,
-  },
-  {
     name: "Tailwind",
     img: tailwind,
   },
@@ -80,21 +76,10 @@ export const imagesData = [
     img: viteJs,
   },
   {
-    name: "Vitest",
-    img: vitest,
-  },
-  {
     name: "Sass",
     img: sass,
   },
-  {
-    name: "Flutter",
-    img: flutter,
-  },
-  {
-    name: "Python",
-    img: python,
-  },
+
 ];
 
 export const imagesHome = {

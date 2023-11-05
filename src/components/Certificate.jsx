@@ -60,14 +60,14 @@ const Certificate = () => {
       })}
       {modalOpen && (
         <div
-          className=" fixed top-0 left-0 w-full h-full flex items-center justify-center bg-black/50"
+          className=" fixed top-0 left-0 w-full h-full flex items-center justify-center bg-black/50 z-50"
           onClick={handleCloseModal}
         >
-          <div className="bg-white py-2 px-2 rounded-lg max-w-[95%] max-h-[95%] md:max-w-[70%] md:max-h-[70%] relative">
+          <div className="bg-white py-2 px-2 rounded-lg max-w-[95%] max-h-[95%] md:max-w-[70%] md:max-h-full z-50">
             <img
               src={certifData[selectedImage].img}
               alt=""
-              className="max-w-full max-h-[70%] "
+              className="w-full h-full object-cover mx-auto"
             />
           </div>
         </div>

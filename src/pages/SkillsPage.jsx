@@ -29,7 +29,7 @@ const SkillsPage = () => {
         whileInView={skillsVariants.whileInView}
         className="flex justify-center items-center gap-10 md:gap-20 md:pb-10"
       >
-        <li className="text-center head-text md:text-4xl py-8 link link-underline link-underline-black">
+        <li className="text-center font-bold md:text-3xl py-8 link link-underline link-underline-black">
           {" "}
           <Link
             to="techstack"
@@ -39,7 +39,7 @@ const SkillsPage = () => {
             TECH STACK
           </Link>
         </li>
-        <li className="text-center head-text md:text-4xl py-8 link link-underline link-underline-black">
+        <li className="text-center font-bold md:text-3xl py-8 link link-underline link-underline-black">
           {" "}
           <Link
             to="certificate"

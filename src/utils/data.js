@@ -7,8 +7,12 @@ import certifCloud from "../assets/certificate/certifCloud.png";
 import certifJavascript from "../assets/certificate/certifJavascript.png";
 import certifReact from "../assets/certificate/certifReact.png";
 import certifPolicy from "../assets/certificate/certifPolicy.png";
+import certifNetwork from "../assets/certificate/certifNetwork.png";
 
 import SISPARCABAI from "../assets/projects/SISPARCABAI.png";
+import SISPARCABAI2 from "../assets/projects/SisparCabai2.png";
+import SISPARCABAI3 from "../assets/projects/SisparCabai3.png";
+import SISPARCABAI4 from "../assets/projects/SisparCabai4.png";
 import AnggaPorto from "../assets/projects/AnggaPorto.png";
 import DashboardGames from "../assets/projects/DashboardGames.png";
 import KasApps from "../assets/projects/KasApps.png";
@@ -74,24 +78,25 @@ export const certifData = [
     body: "Dicoding Indonesia",
   },
   {
-    img: certifPolicy,
-    title: "Pelatihan Web",
-    body: "UKM Policy 2019",
+    img: certifNetwork,
+    title: "Network Administrator",
+    body: "BNSP",
   },
 ];
 
 export const projectData = [
   {
-    img: [SISPARCABAI, AnggaPorto, KasApps, NotesApp],
+    img: [SISPARCABAI, SISPARCABAI2, SISPARCABAI3, SISPARCABAI4],
     label: "FullStack",
     title: "SISPAR-CABAI",
-    subtitle: "Sistem Pakar Deteksi Hama dan Penyakit Tanaman Cabai menggunakan metode case based reasoning",
+    subtitle:
+      "Sistem Pakar Deteksi Hama dan Penyakit Tanaman Cabai menggunakan metode case based reasoning",
     demo: "https://sispar-cabai.vercel.app/",
     code: "https://github.com/anggaadytya/SISPAR-CABAI",
     tech: [react, bootstrap, node, mysql, viteJs],
   },
   {
-    img: [AnggaPorto, SISPARCABAI],
+    img: [AnggaPorto],
     label: "FrontEnd",
     title: "Angga Porto",
     subtitle: "Portfolio Angga Adytya",
@@ -100,7 +105,7 @@ export const projectData = [
     tech: [react, tailwind, viteJs, framer, mu5],
   },
   {
-    img: [DashboardGames, AnggaPorto],
+    img: [DashboardGames],
     label: "FrontEnd",
     title: "Games Dashboard",
     subtitle: "Dashboard Games",
@@ -109,7 +114,7 @@ export const projectData = [
     tech: [react, tailwind, viteJs],
   },
   {
-    img: [KasApps, DashboardGames],
+    img: [KasApps],
     label: "FrontEnd",
     title: "Kas Apps",
     subtitle: "Dashboard Kas",
@@ -118,7 +123,7 @@ export const projectData = [
     tech: [react, tailwind, viteJs],
   },
   {
-    img: [NotesApp, KasApps],
+    img: [NotesApp],
     label: "FrontEnd",
     title: "Notes Apps",
     subtitle: "Dashboard Notes",
