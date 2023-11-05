@@ -21,6 +21,7 @@ import reactQuery from "../assets/logo/reactQuery.svg";
 import tailwind from "../assets/logo/tailwindCss.svg";
 import viteJs from "../assets/logo/viteJs.svg";
 import vitest from "../assets/logo/vitest.svg";
+import express from "../assets/logo/express.svg"
 
 export const imagesData = [
   {
@@ -58,6 +59,10 @@ export const imagesData = [
   {
     name: "Node",
     img: node,
+  },
+  {
+    name: "Express Js",
+    img: express,
   },
   {
     name: "PHP",
