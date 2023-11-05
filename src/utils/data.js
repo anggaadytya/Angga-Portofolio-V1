@@ -20,7 +20,6 @@ import NotesApp from "../assets/projects/NotesApp.png";
 
 import bootstrap from "../assets/logo/bootstrap.svg";
 import css from "../assets/logo/css3.svg";
-import figma from "../assets/logo/figma.svg";
 import framer from "../assets/logo/FrameMotion.svg";
 import html from "../assets/logo/html5.svg";
 import javascript from "../assets/logo/javaScript.svg";
@@ -33,6 +32,7 @@ import reactQuery from "../assets/logo/reactQuery.svg";
 import tailwind from "../assets/logo/tailwindCss.svg";
 import viteJs from "../assets/logo/viteJs.svg";
 import vitest from "../assets/logo/vitest.svg";
+import express from "../assets/logo/express.svg"
 
 import { BsGithub, BsInstagram, BsLinkedin } from "react-icons/bs";
 
@@ -93,7 +93,7 @@ export const projectData = [
       "Sistem Pakar Deteksi Hama dan Penyakit Tanaman Cabai menggunakan metode case based reasoning",
     demo: "https://sispar-cabai.vercel.app/",
     code: "https://github.com/anggaadytya/SISPAR-CABAI",
-    tech: [react, bootstrap, node, mysql, viteJs],
+    tech: [mysql, express, react, node, bootstrap, javascript],
   },
   {
     img: [AnggaPorto],
@@ -102,7 +102,7 @@ export const projectData = [
     subtitle: "Portfolio Angga Adytya",
     demo: "https://angga-adytya.vercel.app/",
     code: "https://github.com/anggaadytya/angga_adytya",
-    tech: [react, tailwind, viteJs, framer, mu5],
+    tech: [react, tailwind, viteJs, framer, mu5, javascript],
   },
   {
     img: [DashboardGames],
@@ -111,7 +111,7 @@ export const projectData = [
     subtitle: "Dashboard Games",
     demo: "https://films-dashboard.vercel.app/",
     code: "https://github.com/anggaadytya/GamesDashboard",
-    tech: [react, tailwind, viteJs],
+    tech: [react, tailwind, viteJs, javascript],
   },
   {
     img: [KasApps],
@@ -120,7 +120,7 @@ export const projectData = [
     subtitle: "Dashboard Kas",
     demo: "https://kas-apps.vercel.app/",
     code: "https://github.com/anggaadytya/kasApps",
-    tech: [react, tailwind, viteJs],
+    tech: [react, tailwind, viteJs, javascript],
   },
   {
     img: [NotesApp],
@@ -129,7 +129,7 @@ export const projectData = [
     subtitle: "Dashboard Notes",
     demo: "https://notes-apps-omega.vercel.app/",
     code: "https://github.com/anggaadytya/Submission-React-Notes-Apps",
-    tech: [react, tailwind, viteJs],
+    tech: [react, tailwind, viteJs, javascript],
   },
 ];
 
