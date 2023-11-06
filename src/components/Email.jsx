@@ -51,15 +51,15 @@ export function Email() {
     <div className="">
       <form className="grid gap-2 md:gap-4 " onSubmit={sendEmail}>
         <div className="col-span-2 md:col-span-1">
-          <label>Name</label>
+          <label className="dark:text-white">Name</label>
           <Input type="text" name="name" />
         </div>
         <div className="col-span-2 md:col-span-1">
-          <label>Email</label>
+          <label className="dark:text-white">Email</label>
           <Input type="email" name="email" />
         </div>
         <div className="col-span-2 md:col-span-2">
-          <label>Message</label>
+          <label className="dark:text-white">Message</label>
           <Textarea name="message" />
         </div>
         <Button type="submit" value="Send" className="col-span-2">
