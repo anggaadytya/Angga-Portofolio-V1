@@ -21,7 +21,9 @@ import reactQuery from "../assets/logo/reactQuery.svg";
 import tailwind from "../assets/logo/tailwindCss.svg";
 import viteJs from "../assets/logo/viteJs.svg";
 import vitest from "../assets/logo/vitest.svg";
-import express from "../assets/logo/express.svg"
+import express from "../assets/logo/express.svg";
+import typeScript from "../assets/images/typescript.png";
+import nextJs from "../assets/logo/nextjs2.svg";
 
 export const imagesData = [
   {
@@ -37,8 +39,16 @@ export const imagesData = [
     img: javascript,
   },
   {
+    name: "TypeScript",
+    img: typeScript,
+  },
+  {
     name: "React",
     img: react,
+  },
+  {
+    name: "Next Js",
+    img: nextJs,
   },
   {
     name: "Vite",

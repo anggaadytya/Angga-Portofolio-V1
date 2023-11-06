@@ -9,16 +9,16 @@ import certifReact from "../assets/certificate/certifReact.png";
 import certifPolicy from "../assets/certificate/certifPolicy.png";
 import certifNetwork from "../assets/certificate/certifNetwork.png";
 
-import SISPARCABAI from "../assets/projects/SISPARCABAI.png";
-import SISPARCABAI2 from "../assets/projects/SisparCabai2.png";
-import SISPARCABAI3 from "../assets/projects/SisparCabai3.png";
-import SISPARCABAI4 from "../assets/projects/SisparCabai4.png";
-import AnggaPorto from "../assets/projects/AnggaPorto.png";
-import DashboardGames from "../assets/projects/DashboardGames.png";
-import KasApps from "../assets/projects/KasApps.png";
-import NotesApp from "../assets/projects/NotesApp.png";
-import CarLanding from "../assets/projects/CarLanding.png";
-import CarLanding2 from "../assets/projects/CarLanding2.png";
+import SISPARCABAI from "../assets/projects/SisparCabai1.svg";
+import SISPARCABAI2 from "../assets/projects/SisparCabai2.svg";
+import SISPARCABAI3 from "../assets/projects/SisparCabai3.svg";
+import SISPARCABAI4 from "../assets/projects/SisparCabai4.svg";
+import AnggaPorto from "../assets/projects/AnggaPorto1.svg";
+import DashboardGames from "../assets/projects/gamesDashboard.svg";
+import KasApps from "../assets/projects/kassApps.svg";
+import NotesApp from "../assets/projects/notesApps.svg";
+import CarLanding from "../assets/projects/CarsLanding1.svg";
+import CarLanding2 from "../assets/projects/CarsLanding2.svg";
 
 import bootstrap from "../assets/logo/bootstrap.svg";
 import css from "../assets/logo/css3.svg";
@@ -90,7 +90,7 @@ export const certifData = [
 
 export const projectData = [
   {
-    img: [SISPARCABAI, SISPARCABAI2, SISPARCABAI4, SISPARCABAI3],
+    img: [SISPARCABAI, SISPARCABAI2, SISPARCABAI3, SISPARCABAI4],
     label: "FullStack",
     title: "SISPAR-CABAI",
     subtitle:
