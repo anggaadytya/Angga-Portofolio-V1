@@ -17,6 +17,8 @@ import AnggaPorto from "../assets/projects/AnggaPorto.png";
 import DashboardGames from "../assets/projects/DashboardGames.png";
 import KasApps from "../assets/projects/KasApps.png";
 import NotesApp from "../assets/projects/NotesApp.png";
+import CarLanding from "../assets/projects/CarLanding.png";
+import CarLanding2 from "../assets/projects/CarLanding2.png";
 
 import bootstrap from "../assets/logo/bootstrap.svg";
 import css from "../assets/logo/css3.svg";
@@ -33,6 +35,8 @@ import tailwind from "../assets/logo/tailwindCss.svg";
 import viteJs from "../assets/logo/viteJs.svg";
 import vitest from "../assets/logo/vitest.svg";
 import express from "../assets/logo/express.svg"
+import nextJs from "../assets/logo/nextjs2.svg";
+import typeScript from "../assets/images/typescript.png"
 
 import { BsGithub, BsInstagram, BsLinkedin } from "react-icons/bs";
 
@@ -86,7 +90,7 @@ export const certifData = [
 
 export const projectData = [
   {
-    img: [SISPARCABAI, SISPARCABAI2, SISPARCABAI3, SISPARCABAI4],
+    img: [SISPARCABAI, SISPARCABAI2, SISPARCABAI4, SISPARCABAI3],
     label: "FullStack",
     title: "SISPAR-CABAI",
     subtitle:
@@ -129,8 +133,17 @@ export const projectData = [
     subtitle: "Dashboard Notes",
     demo: "https://notes-apps-omega.vercel.app/",
     code: "https://github.com/anggaadytya/Submission-React-Notes-Apps",
-    tech: [react, tailwind, viteJs, javascript],
+    tech: [react, css, viteJs, javascript],
   },
+  {
+    img: [CarLanding, CarLanding2],
+    label: "FrontEnd",
+    title: "Car Landing Page",
+    subtitle: "Landing Page Penjualan mobil",
+    demo: "https://landing-page-rust-ten.vercel.app/",
+    code: "https://github.com/anggaadytya/Cars-Landing-Page",
+    tech: [typeScript, nextJs, tailwind],
+  }
 ];
 
 export const contactData = [

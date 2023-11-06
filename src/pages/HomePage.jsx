@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
-import { imagesHome } from "../utils/images"
-import {HiOutlineDownload} from 'react-icons/hi'
-import CV from "../assets/resume/CV-ANGGA-ADYTYA.pdf"
+import { imagesHome } from "../utils/images";
+import { HiOutlineDownload } from "react-icons/hi";
+import CV from "../assets/resume/CV-ANGGA-ADYTYA.pdf";
 
 const HomePage = () => {
   const scaleVariants = {
@@ -22,7 +22,7 @@ const HomePage = () => {
         transition={{ duration: 0.5 }}
         className="app__header-info"
       >
-        <div className="app__header-badge md:py-40">
+        <div className="app__header-badge md:py-20">
           <div className="badge-cmp app__flex ">
             <span className="animate-waving-hand">👋</span>
             <div style={{ marginLeft: 20 }}>
@@ -37,10 +37,15 @@ const HomePage = () => {
           </div>
 
           <button className="tag-cmp app__flex transition-all ">
-            <a href={CV} className="p-text tracking-wide flex items-center gap-2" download={true}>RESUME <HiOutlineDownload className="animate-bounce h-5 w-5 " /></a>
+            <a
+              href={CV}
+              className="p-text tracking-wide flex items-center gap-2"
+              download={true}
+            >
+              RESUME <HiOutlineDownload className="animate-bounce h-5 w-5 " />
+            </a>
           </button>
         </div>
-        
       </motion.div>
 
       <motion.div
@@ -48,7 +53,12 @@ const HomePage = () => {
         transition={{ duration: 0.5, delayChildren: 0.5 }}
         className="app__header-img "
       >
-        <img src={imagesHome.imagesSide} alt="profile_bg" width={1000} height={1000}/>
+        <img
+          src={imagesHome.imagesSide}
+          alt="profile_bg"
+          width={1000}
+          height={1000}
+        />
         <motion.img
           whileInView={{ scale: [0, 1] }}
           transition={{ duration: 1, ease: "easeInOut" }}
@@ -63,11 +73,13 @@ const HomePage = () => {
         whileInView={scaleVariants.whileInView}
         className="app__header-circles "
       >
-        {[imagesHome.node, imagesHome.react, imagesHome.tailwind].map((circle, index) => (
-          <div className="circle-cmp app__flex" key={`circle-${index}`}>
-            <img src={circle} alt="profile_bg" />
-          </div>
-        ))}
+        {[imagesHome.node, imagesHome.react, imagesHome.tailwind].map(
+          (circle, index) => (
+            <div className="circle-cmp app__flex" key={`circle-${index}`}>
+              <img src={circle} alt="profile_bg" />
+            </div>
+          )
+        )}
       </motion.div>
     </div>
   );

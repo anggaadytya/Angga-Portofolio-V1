@@ -34,7 +34,7 @@ const ProjectPage = () => {
 
   return (
     <>
-      <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-5 mb-10 md:mb-0 py-10 md:py-28 mx-1 md:mx-6 lg:mx-10">
+      <div className="container grid grid-cols-1 md:grid-cols-3 gap-5 mb-10 md:mb-0 py-10 md:py-28 mx-1 md:mx-auto">
         {projectData.map((project, index) => {
           return (
             <motion.div

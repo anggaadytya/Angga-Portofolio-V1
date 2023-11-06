@@ -18,7 +18,7 @@ const TechStack = () => {
   };
 
   return (
-    <motion.div className=" grid grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-1 px-20 md:gap-[5rem] mx-auto">
+    <motion.div className=" grid grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-10 px-20 md:gap-[5rem] mx-auto">
       {imagesData.map((circle, index) => (
         <motion.div
           variants={scaleVariants}

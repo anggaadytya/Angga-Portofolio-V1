@@ -25,8 +25,28 @@ import express from "../assets/logo/express.svg"
 
 export const imagesData = [
   {
+    name: "HTML",
+    img: html,
+  },
+  {
     name: "CSS",
     img: css,
+  },
+  {
+    name: "JavaScript",
+    img: javascript,
+  },
+  {
+    name: "React",
+    img: react,
+  },
+  {
+    name: "Vite",
+    img: viteJs,
+  },
+  {
+    name: "PHP",
+    img: php,
   },
   {
     name: "Figma",
@@ -37,20 +57,20 @@ export const imagesData = [
     img: bootstrap,
   },
   {
-    name: "Framer Motion",
-    img: framer,
+    name: "Tailwind",
+    img: tailwind,
   },
   {
-    name: "HTML",
-    img: html,
-  },
-  {
-    name: "JavaScript",
-    img: javascript,
+    name: "Sass",
+    img: sass,
   },
   {
     name: "Material UI",
     img: mu5,
+  },
+  {
+    name: "Framer Motion",
+    img: framer,
   },
   {
     name: "MySQL",
@@ -64,27 +84,6 @@ export const imagesData = [
     name: "Express Js",
     img: express,
   },
-  {
-    name: "PHP",
-    img: php,
-  },
-  {
-    name: "React",
-    img: react,
-  },
-  {
-    name: "Tailwind",
-    img: tailwind,
-  },
-  {
-    name: "Vite",
-    img: viteJs,
-  },
-  {
-    name: "Sass",
-    img: sass,
-  },
-
 ];
 
 export const imagesHome = {
