@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import { imagesHome } from "../utils/images";
 import { HiOutlineDownload } from "react-icons/hi";
 import CV from "../assets/resume/CV-ANGGA-ADYTYA.pdf";
+import { Helmet } from "react-helmet";
 
 const HomePage = () => {
   const scaleVariants = {
@@ -16,6 +17,13 @@ const HomePage = () => {
   };
 
   return (
+    <>
+   <Helmet>
+    <title>Home - Angga Adytya</title>
+    <meta name="description" content="Home Angga Adytya" />
+    <meta name="keywords" content="angga, adytya, portofolio, react, vite, tailwind, vercel" />
+    <meta name="author" content="Angga Adytya" />
+   </Helmet>
     <div className="app__header flex justify-center items-center ">
       <motion.div
         whileInView={{ x: [-100, 0], opacity: [0, 1] }}
@@ -82,6 +90,7 @@ const HomePage = () => {
         )}
       </motion.div>
     </div>
+    </>
   );
 };
 

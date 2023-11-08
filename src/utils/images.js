@@ -47,13 +47,14 @@ export const imagesData = [
     img: react,
   },
   {
-    name: "Next Js",
-    img: nextJs,
-  },
-  {
     name: "Vite",
     img: viteJs,
   },
+  {
+    name: "Next Js",
+    img: nextJs,
+  },
+
   {
     name: "PHP",
     img: php,

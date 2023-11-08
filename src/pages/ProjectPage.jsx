@@ -2,6 +2,7 @@ import { projectData } from "../utils/data";
 import { motion } from "framer-motion";
 import { useState } from "react";
 import { CarouselCustomNavigation } from "../components/Caraousel";
+import { Helmet } from "react-helmet";
 
 const ProjectPage = () => {
   const [modalOpen, setModalOpen] = useState(false);
@@ -34,6 +35,12 @@ const ProjectPage = () => {
 
   return (
     <>
+      <Helmet>
+        <title>Project - Angga Adytya</title>
+        <meta name="description" content="Project Angga Adytya" />
+        <meta name="keywords" content="angga, adytya, portofolio, react, vite, tailwind, vercel" />
+        <meta name="author" content="Angga Adytya" />
+      </Helmet>
       <div className="container grid grid-cols-1 md:grid-cols-3 gap-5 mb-10 md:mb-0 py-10 md:py-28 mx-1 md:mx-auto">
         {projectData.map((project, index) => {
           return (
